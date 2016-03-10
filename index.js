@@ -1,7 +1,7 @@
 "use strict";
 
 const HOST = process.env.CHECK_HOST
-      ES_URL = process.env.ES_URL || 'http://elasticsearch:9200'
+    , ES_URL = process.env.ES_URL || 'http://elasticsearch:9200'
     , ping = require ("net-ping")
     , elasticsearch = require('elasticsearch');
     ;

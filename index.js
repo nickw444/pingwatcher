@@ -1,6 +1,7 @@
 "use strict";
 
 const HOST = process.env.CHECK_HOST
+      ES_URL = process.env.ES_URL || 'http://elasticsearch:9200'
     , ping = require ("net-ping")
     , elasticsearch = require('elasticsearch');
     ;
@@ -12,7 +13,7 @@ if (!HOST) {
 
 let pingSession = ping.createSession();
 let esclient = elasticsearch.Client({
-  host: '192.168.8.10:9200'
+  host: ES_URL
 })
 
 function getStatus() {
